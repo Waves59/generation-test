@@ -1,0 +1,184 @@
+/*------------------------------------
+  #COLORS
+------------------------------------*/
+
+$primary: #02197a;
+$blue-middle: #004680;
+$blue-lighter: #377f9a;
+$secondary: #1fe9ab;
+$blue-light: #dee5fe;
+$blue-dark: #021152;
+$white: #fafcfc;
+$black: #2c2c2c;
+$gray-light: #f9fbfc;
+$gray-blue: #f2f4ff;
+$green-flash: #1fe9ab;
+$blue-darkest: #030e3d;
+$grey: #535e6b;
+$grey-light: #e1e3e6;
+$green-dark: #33cb9c;
+
+$colorsMap: (
+  "primary": $primary,
+  "blue-dark": $blue-dark,
+  "gray-light": $gray-light
+);
+/*------------------------------------
+  #BASE
+------------------------------------*/
+
+$base-font-size: 16px !default;
+$base-font-family: Ubuntu !default;
+$base-font-color: $black;
+
+$secondary-font-family: Quickand !default;
+
+$enable-grid-classes: true !default;
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: () !default;
+$grid-breakpoints: map-merge(
+  (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+  ),
+  $grid-breakpoints
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: () !default;
+$container-max-widths: map-merge(
+  (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+  ),
+  $container-max-widths
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 40px !default;
+
+/*------------------------------------
+#LAYOUTS
+------------------------------------*/
+
+// footer
+$footer-backgroundColor: $blue-dark;
+
+/*------------------------------------
+#COMPONENTS
+------------------------------------*/
+
+// banner
+$banner-backgroundColor: $blue-dark;
+$banner-height: 40px;
+
+// buttons
+$button-sizes: (
+  "sm": (
+    border-radius: 24px,
+    font-size: 14px,
+    height: 48px,
+    min-width: 200px,
+    padding: 12px 24px
+  ),
+  "md": (
+    border-radius: 30px,
+    font-size: 15px,
+    height: 60px,
+    padding: 16px 24px
+  )
+);
+
+$button-colors: (
+  "primary": (
+    "default": (
+      background-color: $primary,
+      color: $white
+    ),
+    "hovered": (
+      background-color: $blue-light,
+      color: $primary
+    )
+  ),
+  "primary-light": (
+    "default": (
+      background-color: $blue-light,
+      color: $primary
+    ),
+    "hovered": (
+      background-color: $primary,
+      color: #fff
+    )
+  ),
+  "secondary": (
+    "default": (
+      background-color: $secondary,
+      color: $white
+    ),
+    "hovered": (
+      background-color: $white,
+      color: $secondary
+    )
+  ),
+  "secondary-inverse": (
+    "default": (
+      background-color: $white,
+      color: $secondary
+    ),
+    "hovered": (
+      background-color: $secondary,
+      color: $white
+    )
+  ),
+  "blue-dark": (
+    "default": (
+      background-color: $blue-dark,
+      color: $white
+    ),
+    "hovered": (
+      background-color: $white,
+      color: $blue-dark
+    )
+  ),
+  "link": (
+    "default": (
+      color: $secondary,
+      font-weight: 500,
+      padding: 4px 10px,
+      transform: translateX(-10px),
+      transition-property: all,
+      transition-timing-function: $easeInOutCirc
+    ),
+    "hovered": (
+      color: $primary,
+      background-color: $gray-light,
+      transform: none
+    )
+  )
+);
+
+// headband
+$headband-backgroundColor: #f2f6f9;
+$headband-height: 60px;
+$headband-hero-backgroundColor: $blue-middle;

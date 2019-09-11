@@ -1,0 +1,6 @@
+# Mailjet vars
+MAILJET_API_KEY=
+MAILJET_SECRET_KEY=
+
+EMAIL_DEFAULT_FROM='bonjour@derniercri.io'
+EMAIL_DEFAULT_TO='arnaud@derniercri.io'

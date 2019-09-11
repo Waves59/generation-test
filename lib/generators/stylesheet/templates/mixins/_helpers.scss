@@ -1,0 +1,12 @@
+// Truncate text
+@mixin truncate-text($overflow: ellipsis) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow;
+}
+
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}

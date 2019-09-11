@@ -1,0 +1,33 @@
+// Create blocks ((rounded)square / (rounded)rectangle , circle)
+@mixin size($width, $height: $width, $border-radius: null) {
+  width: $width;
+  height: $height;
+  @if ($border-radius !=null) {
+    border-radius: $border-radius;
+  }
+}
+
+@mixin circle($width, $height: $width) {
+  @include size($width, $height);
+  border-radius: 50%;
+}
+
+// Soft overflow
+@mixin overflow($direction: 'v') {
+  @if $direction == 'v' {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  @if $direction == 'h' {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin not-last-child($selector) {
+  & #{$selector}:not(:last-child) {
+    @content;
+  }
+}

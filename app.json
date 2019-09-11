@@ -1,0 +1,22 @@
+{
+  "name": "generation-test",
+  "scripts": {
+  },
+  "env": {
+    "SENTRY_DSN": { "required": true },
+    "PRISMIC_API_TOKEN": { "required": true },
+    "PRISMIC_API_URL": { "required": true },
+    "HOST": { "required": true },
+    "MAILJET_API_KEY": { "required": true },
+    "MAILJET_SECRET_KEY": { "required": true }
+  },
+  "formation": {
+  },
+  "addons": [
+   ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}

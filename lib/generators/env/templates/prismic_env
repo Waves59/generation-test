@@ -1,0 +1,5 @@
+
+# Prismic api
+PRISMIC_API_TOKEN=
+PRISMIC_API_URL=
+PRISMIC_DISABLE_CACHE=true # remove this if you want some cache
